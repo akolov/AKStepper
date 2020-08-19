@@ -72,7 +72,7 @@ public final class AKStepper: UIControl {
     return contentStackView.systemLayoutSizeFitting(.zero)
   }
 
-  private lazy var valueWidthConstraint = valueLabel.widthAnchor.constraint(lessThanOrEqualToConstant: minValueLabelWidth)
+  private lazy var valueWidthConstraint = valueLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: minValueLabelWidth)
 
   private var minValueLabelWidth: CGFloat {
     if let valueFormatter = configuration.valueFormatter {
