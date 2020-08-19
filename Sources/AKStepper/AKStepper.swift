@@ -1,7 +1,7 @@
 import AKButton
 import UIKit
 
-public final class CustomStepper: UIControl {
+public final class AKStepper: UIControl {
 
   public struct Configuration {
     public var buttonConfiguration: AKButton.Configuration
