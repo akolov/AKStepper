@@ -149,6 +149,7 @@ public final class AKStepper: UIControl {
     contentStackView.addArrangedSubview(valueLabel)
     contentStackView.addArrangedSubview(plusButton)
 
+    contentStackView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       contentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
       contentStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -156,14 +157,14 @@ public final class AKStepper: UIControl {
       contentStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
     ])
 
+    plusButton.translatesAutoresizingMaskIntoConstraints = false
+    minusButton.translatesAutoresizingMaskIntoConstraints = false
+    valueLabel.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
       plusButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 24),
       plusButton.widthAnchor.constraint(equalTo: plusButton.heightAnchor),
       minusButton.heightAnchor.constraint(equalTo: plusButton.heightAnchor),
-      minusButton.widthAnchor.constraint(equalTo: plusButton.widthAnchor)
-    ])
-
-    NSLayoutConstraint.activate([
+      minusButton.widthAnchor.constraint(equalTo: plusButton.widthAnchor),
       valueWidthConstraint
     ])
 
