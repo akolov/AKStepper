@@ -1,6 +1,7 @@
 import AKButton
 import UIKit
 
+@IBDesignable
 public final class AKStepper: UIControl {
 
   public struct Configuration {
@@ -216,6 +217,17 @@ public final class AKStepper: UIControl {
 
     minusButton.isEnabled = _value > minValue
     plusButton.isEnabled = _value < maxValue
+  }
+
+}
+
+// MARK: Interface Builder Support
+
+extension AKStepper {
+
+  public override func prepareForInterfaceBuilder() {
+    super.prepareForInterfaceBuilder()
+    value = 1
   }
 
 }
