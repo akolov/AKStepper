@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AKButton",
+        "repositoryURL": "https://github.com/akolov/AKButton.git",
+        "state": {
+          "branch": null,
+          "revision": "164b2a08572c929783cd7eb0784219caff0a3cb5",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
+          "version": "5.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
