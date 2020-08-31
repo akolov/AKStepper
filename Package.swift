@@ -11,7 +11,7 @@ let package = Package(
   products: [
     .library(name: "AKStepper", targets: ["AKStepper"])],
   dependencies: [
-    .package(url: "https://github.com/akolov/AKButton.git", from: "1.0.0")
+    .package(url: "https://github.com/akolov/AKButton.git", from: "1.0.1")
   ],
   targets: [
     .target(name: "AKStepper", dependencies: ["AKButton"])
