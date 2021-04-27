@@ -1,5 +1,4 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -9,11 +8,17 @@ let package = Package(
     .iOS(.v12)
   ],
   products: [
-    .library(name: "AKStepper", targets: ["AKStepper"])],
+    .library(name: "AKStepper", targets: ["AKStepper"])
+  ],
   dependencies: [
-    .package(url: "https://github.com/akolov/AKButton.git", from: "1.0.4")
+    .package(name: "AKButton", url: "https://github.com/akolov/AKButton.git", .upToNextMajor(from: "2.0.0"))
   ],
   targets: [
-    .target(name: "AKStepper", dependencies: ["AKButton"])
+    .target(
+      name: "AKStepper",
+      dependencies: [
+        .product(name: "AKButton", package: "AKButton")
+      ]
+    )
   ]
 )
