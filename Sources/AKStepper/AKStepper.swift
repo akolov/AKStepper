@@ -68,6 +68,8 @@ public final class AKStepper: UIControl {
     }
   }
 
+  public var onValueChanged: ((Int) -> Void)?
+
   public override var intrinsicContentSize: CGSize {
     return contentStackView.systemLayoutSizeFitting(.zero)
   }
@@ -179,6 +181,7 @@ public final class AKStepper: UIControl {
     }
 
     value = newValue
+    onValueChanged?(value)
     sendActions(for: .valueChanged)
   }
 
