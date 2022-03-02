@@ -38,14 +38,14 @@ public final class AKStepper: UIControl {
 
   public private(set) lazy var minusButton: AKButton = {
     let button = AKButton(configuration: configuration.buttonConfiguration)
-    button.action = { [weak self] in self?.didTapMinus() }
+    button.tapHandler = { [weak self] in self?.didTapMinus() }
     button.title = { _ in "-" }
     return button
   }()
 
   public private(set) lazy var plusButton: AKButton = {
     let button = AKButton(configuration: configuration.buttonConfiguration)
-    button.action = { [weak self] in self?.didTapPlus() }
+    button.tapHandler = { [weak self] in self?.didTapPlus() }
     button.title = { _ in "+" }
     return button
   }()

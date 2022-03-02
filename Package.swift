@@ -11,7 +11,7 @@ let package = Package(
     .library(name: "AKStepper", targets: ["AKStepper"])
   ],
   dependencies: [
-    .package(name: "AKButton", url: "https://github.com/akolov/AKButton.git", .upToNextMajor(from: "2.0.0"))
+    .package(name: "AKButton", url: "https://github.com/akolov/AKButton.git", .upToNextMajor(from: "2.1.0"))
   ],
   targets: [
     .target(
